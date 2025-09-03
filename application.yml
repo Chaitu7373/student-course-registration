@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop     # Hibernate creates tables on startup
+    defer-datasource-initialization: true  # ensure data.sql runs AFTER tables exist
+  sql:
+    init:
+      mode: always              # always run schema/data scripts for embedded DBs
+  h2:
+    console:
+      enabled: true

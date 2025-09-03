@@ -1,0 +1,11 @@
+6)	We love Hibernate and also hate it!! Would love to hear your opinion on best practices.
+
+If the data design is very complex, with lots of relationships and business rules,
+Hibernate helps because it takes care of a lot of the heavy lifting—mapping, transactions, and consistency.
+But if the data model is small and simple, Hibernate may feel like overkill, and using plain SQL or lightweight tools can be faster and easier.
+Hibernate is a tool that helps your app save and read data, and it works best when you keep things simple and intentional.
+Only load the pieces of data you actually need for a screen or action, and keep each operation small and clearly defined.
+If two things are related (like a student and a course) and the relationship has its own info (like a score), model that relationship explicitly instead of hiding it.
+Put basic rules in the database—like “this field is required” or “these values must be unique”—and keep any database changes in versioned files so you can review and roll them back if needed.
+Save data in batches when you can for better speed, and don’t add fancy caching or “magic” optimizations until you’ve measured a real slowdown.
+Finally, test against the same kind of database you’ll use in production so there are no surprises later.
